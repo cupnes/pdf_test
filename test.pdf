@@ -30,7 +30,7 @@ endobj
 endobj
 
 5 0 obj
-	<<	/Length 47 >>
+	<<	>>
 stream
 	BT
 		/F1 24 Tf
@@ -51,17 +51,17 @@ endobj
 7 0 obj
 	<<	/Type /Page
 		/Parent 3 0 R
-		/Contents 5 0 R
+		/Contents 8 0 R
 	>>
 endobj
 
 8 0 obj
-	<<	/Length 47 >>
+	<<	>>
 stream
 	BT
 		/F1 24 Tf
-		0 0 Td
-		(Hello World) Tj
+		0 100 Td
+		(Foo Bar Baz) Tj
 	ET
 endstream
 endobj
