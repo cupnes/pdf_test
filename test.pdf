@@ -25,6 +25,7 @@ endobj
 4 0 obj
 	<<	/Type /Page
 		/Parent 3 0 R
+		/Annots [9 0 R]
 		/Contents 5 0 R
 	>>
 endobj
@@ -66,7 +67,16 @@ stream
 endstream
 endobj
 
+9 0 obj
+	<<	/Type /Annot
+		/Subtype /Link
+		/Rect [10 10 20 20]
+		/Border [16 16 1]
+		/Dest [7 0 R /Fit]
+	>>
+endobj
+
 trailer
-	<<	/Size 8
+	<<	/Size 9
 		/Root 1 0 R
 	>>
