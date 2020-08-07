@@ -14,18 +14,18 @@ endobj
 
 3 0 obj
 	<<	/Type /Pages
-		/Kids [4 0 R]
-		/Count 1
+		/Resources	<<	/Font << /F1 6 0 R >>
+				>>
+		/MediaBox [0 0 400 300]
+		/Kids [4 0 R 7 0 R]
+		/Count 2
 	>>
 endobj
 
 4 0 obj
 	<<	/Type /Page
 		/Parent 3 0 R
-		/MediaBox [0 0 500 500]
 		/Contents 5 0 R
-		/Resources	<<	/Font << /F1 6 0 R >>
-				>>
 	>>
 endobj
 
@@ -48,7 +48,25 @@ endobj
 	>>
 endobj
 
+7 0 obj
+	<<	/Type /Page
+		/Parent 3 0 R
+		/Contents 5 0 R
+	>>
+endobj
+
+8 0 obj
+	<<	/Length 47 >>
+stream
+	BT
+		/F1 24 Tf
+		0 0 Td
+		(Hello World) Tj
+	ET
+endstream
+endobj
+
 trailer
-	<<	/Size 6
+	<<	/Size 8
 		/Root 1 0 R
 	>>
