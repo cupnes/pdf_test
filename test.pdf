@@ -1123,6 +1123,15 @@ stream
 	305 216 l
 	B
 
+	1 1 1 rg
+
+	% Title text
+	BT
+	/F2 10.5 Tf
+	20 217 Td
+	[<39>9<1F>7<4F>-4<02>]TJ
+	ET
+
 	296 0 0 201 12 12 cm
 	/Im1 Do
 	Q
