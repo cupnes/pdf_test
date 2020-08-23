@@ -1085,7 +1085,7 @@ endobj
 15 0 obj
 	<<	/Type /Page
 		/Parent 3 0 R
-		/Annots [27 0 R]
+		/Annots [9 0 R]
 		/Contents 16 0 R
 	>>
 endobj
@@ -1133,6 +1133,7 @@ endobj
 	<<	/Type /Page
 		/Parent 3 0 R
 		/Annots	[
+				27 0 R
 				26 0 R
 				28 0 R
 			]
@@ -10125,9 +10126,9 @@ endobj
 27 0 obj
 	<<	/Type /Annot
 		/Subtype /Link
-		/Rect [293 213 308 228]
+		/Rect [18 200 52 212]
 		/Border [0 0 0]
-		/Dest [17 0 R /Fit]
+		/Dest [32 0 R /Fit]
 	>>
 endobj
 
