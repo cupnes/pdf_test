@@ -171,6 +171,10 @@ endobj
 		/Parent 3 0 R
 		/Annots [
 				9 0 R
+				36 0 R
+				37 0 R
+				38 0 R
+				39 0 R
 				35 0 R
 			]
 		/Contents 8 0 R
@@ -10645,7 +10649,59 @@ endobj
 	>>
 endobj
 
+36 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [50 194 112 205]
+		/A
+			<<	/URI (https://25th-anniv.toranoana.jp/toramatsuri/)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
+37 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [165 194 293 205]
+		/A
+			<<	/URI (https://ecs.toranoana.jp/tora/ec/item/040030845833/)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
+38 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [18 183 51 194]
+		/A
+			<<	/URI (https://ecs.toranoana.jp/tora/ec/item/040030845833/)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
+39 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [53 183 125 194]
+		/A
+			<<	/URI (https://yohgami.booth.pm/items/2265684)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
 trailer
-	<<	/Size 35
+	<<	/Size 39
 		/Root 1 0 R
 	>>
