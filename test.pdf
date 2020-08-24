@@ -31,8 +31,9 @@ endobj
 				15 0 R	% title
 				4 0 R	% intro(p1)
 				7 0 R	% intro(p2)
+				40 0 R	% acboard
 			]
-		/Count 5
+		/Count 6
 	>>
 endobj
 
@@ -1198,6 +1199,7 @@ endobj
 				27 0 R
 				26 0 R
 				28 0 R
+				42 0 R
 			]
 		/Contents 18 0 R
 	>>
@@ -10701,7 +10703,102 @@ endobj
 	>>
 endobj
 
+40 0 obj
+	<<	/Type /Page
+		/Parent 3 0 R
+		/Annots [9 0 R]
+		/Contents 41 0 R
+	>>
+endobj
+
+41 0 obj
+	<<	>>
+stream
+	% Fill the background with a solid color
+	0.76 0.78 0.80 RG
+	0.76 0.78 0.80 rg
+	0 0 320 240 re
+	B
+
+	% Draw the window
+	0.06 0.06 0.08 RG	% black line color
+	0.76 0.77 0.78 rg	% system color
+	10 10 300 220 re
+	B
+	0.06 0.06 0.08 RG
+	1.00 1.00 1.00 rg
+	12 12 296 216 re
+	B
+	0.06 0.06 0.08 RG
+	0.00 0.00 0.67 rg
+	12 213 281 15 re
+	B
+	0.06 0.06 0.08 RG
+	0.76 0.77 0.78 rg
+	293 213 15 15 re
+	B
+	0.06 0.06 0.08 rg
+	296 216 m
+	305 225 l
+	296 225 m
+	305 216 l
+	B
+
+	1 1 1 rg
+
+	% Title text
+	BT
+	/F2 10.5 Tf
+	20 217 Td
+	[<6F10C3CC7DE0>]TJ
+	ET
+
+	0 0 0 rg
+
+	BT
+	19.1 195.4 Td
+	[<C3>8<E1>8<8F><C1>4<1F>7<44>2<31>2<12>5<2E>5<43>-5<24>6<DF>3<24>-3<32>7<7D>10<E025>11<6F10>10<6619>3<0E>-2<1A>10<1B>4<1C>]TJ
+	ET
+	BT
+	19.1 185.0 Td
+	[<43>3<24>-3<DF>3<24>6<32>7<7DE0>10<05>8<E2>10<E312>15<47>5<14><E4>-1<C3>8<90>15<90>6<C3><05>8<E5>10<AF>10<25>2<E61B>13<7DE0>10<25>]TJ
+	ET
+	BT
+	19.1 174.6 Td
+	[<D1>14<72>10<3C>-4<32>7<38>6<24>6<32>7<12>5<E710>10<6619>3<0E>6<1A>1<1B>13<1C>]TJ
+	ET
+	BT
+	19.1 153.7 Td
+	[<61>10<05>8<2B>10<B409>-1<2E>5<E710>10<7D>10<E025>2<65>10<105D>9<D9>7<19>-5<0E>6<14>11<E8E9>10<12>5<1B>13<1C>]TJ
+	ET
+	BT
+	19.1 143.3 Td
+	[<E8>10<E934>10<EA>10<EB17>5<47>5<14>11<05>8<11><EC>9<E1><12>5<2E>]TJ
+	1 0 0 rg
+	<ED>Tj
+	0 0 0 rg
+	<2A>Tj
+	[<EE12>15<EF42>8<F0>-3<F1>8<6627>6<F2>10<F3>]TJ
+	<2D>Tj
+	<25>Tj
+	ET
+	BT
+	19.1 132.9 Td
+	[<5B>10<5C5D>9<D9>-1<19>3<0E>6<1A>10<1B>4<1C>]TJ
+	ET
+endstream
+endobj
+
+42 0 obj
+	<<	/Type /Annot
+		/Subtype /Link
+		/Rect [165 151.5 229 196.5]
+		/Border [0 0 0]
+		/Dest [40 0 R /Fit]
+	>>
+endobj
+
 trailer
-	<<	/Size 39
+	<<	/Size 42
 		/Root 1 0 R
 	>>
