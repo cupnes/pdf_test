@@ -11084,6 +11084,7 @@ endobj
 				53 0 R
 				54 0 R
 				55 0 R
+				56 0 R
 			]
 		/Contents 49 0 R
 	>>
@@ -11290,7 +11291,7 @@ endobj
 	<<	/Border [0 0 0]
 		/Subtype /Link
 		/Type /Annot
-		/Rect [30 98 63 112]
+		/Rect [31 98 64 112]
 		/A
 			<<	/URI (https://www.youtube.com/watch?v=_Y3BebQdb5Y)
 				/Type /Action
@@ -11325,7 +11326,20 @@ endobj
 	>>
 endobj
 
+56 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [31 67 64 80]
+		/A
+			<<	/URI (https://www.youtube.com/watch?v=LHDmrfDM7xc)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
 trailer
-	<<	/Size 55
+	<<	/Size 56
 		/Root 1 0 R
 	>>
