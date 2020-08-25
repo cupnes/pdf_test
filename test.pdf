@@ -11077,7 +11077,10 @@ endobj
 48 0 obj
 	<<	/Type /Page
 		/Parent 3 0 R
-		/Annots [9 0 R]
+		/Annots	[
+				9 0 R
+				51 0 R
+			]
 		/Contents 49 0 R
 	>>
 endobj
@@ -11253,7 +11256,20 @@ endobj
 	>>
 endobj
 
+51 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [17 183 110 195]
+		/A
+			<<	/URI (https://www.youtube.com/channel/UC1kKe2fuipI-RC_It9uSGYQ)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
 trailer
-	<<	/Size 50
+	<<	/Size 51
 		/Root 1 0 R
 	>>
