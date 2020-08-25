@@ -34,8 +34,9 @@ endobj
 				7 0 R	% intro(p2)
 				40 0 R	% acboard
 				43 0 R	% working img
+				48 0 R	% youtube
 			]
-		/Count 7
+		/Count 8
 	>>
 endobj
 
@@ -1203,6 +1204,7 @@ endobj
 				28 0 R
 				42 0 R
 				45 0 R
+				50 0 R
 			]
 		/Contents 18 0 R
 	>>
@@ -11028,7 +11030,72 @@ endobj
 	>>
 endobj
 
+48 0 obj
+	<<	/Type /Page
+		/Parent 3 0 R
+		/Annots [9 0 R]
+		/Contents 49 0 R
+	>>
+endobj
+
+49 0 obj
+	<<	>>
+stream
+	% Fill the background with a solid color
+	0.76 0.78 0.80 RG
+	0.76 0.78 0.80 rg
+	0 0 320 240 re
+	B
+
+	% Draw the window
+	0.06 0.06 0.08 RG	% black line color
+	0.76 0.77 0.78 rg	% system color
+	10 10 300 220 re
+	B
+	0.06 0.06 0.08 RG
+	1.00 1.00 1.00 rg
+	12 12 296 216 re
+	B
+	0.06 0.06 0.08 RG
+	0.00 0.00 0.67 rg
+	12 213 281 15 re
+	B
+	0.06 0.06 0.08 RG
+	0.76 0.77 0.78 rg
+	293 213 15 15 re
+	B
+	0.06 0.06 0.08 rg
+	296 216 m
+	305 225 l
+	296 225 m
+	305 216 l
+	B
+
+	1 1 1 rg
+
+	% Title text
+	BT
+	/F2 10.5 Tf
+	20 217 Td
+	[<F5C6>4<BC>-5<EC>9<BC>-5<C7>5<C0>]TJ
+	ET
+
+	0 0 0 rg
+
+
+endstream
+endobj
+
+50 0 obj
+	<<	/Type /Annot
+		/Subtype /Link
+		/Rect [17 105 81 150]
+		/Border [0 0 0]
+		/Dest [48 0 R /Fit]
+	>>
+endobj
+
 trailer
-	<<	/Size 47
+	<<	/Size 50
 		/Root 1 0 R
 	>>
