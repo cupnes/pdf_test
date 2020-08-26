@@ -11388,7 +11388,12 @@ endobj
 59 0 obj
 	<<	/Type /Page
 		/Parent 3 0 R
-		/Annots [9 0 R]
+		/Annots	[
+				9 0 R
+				62 0 R
+				63 0 R
+				64 0 R
+			]
 		/Contents 60 0 R
 	>>
 endobj
@@ -11553,7 +11558,46 @@ endobj
 	>>
 endobj
 
+62 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [18 165 200 177]
+		/A
+			<<	/URI (https://yohgami.booth.pm/items/2042170)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
+63 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [197 134 265 146]
+		/A
+			<<	/URI (https://yohgami.booth.pm/items/2265684)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
+64 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [18 80 206 93]
+		/A
+			<<	/URI (https://github.com/cupnes/sh_gbos/)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
 trailer
-	<<	/Size 61
+	<<	/Size 64
 		/Root 1 0 R
 	>>
