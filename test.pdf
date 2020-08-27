@@ -11723,6 +11723,11 @@ endobj
 		/Parent 3 0 R
 		/Annots	[
 				9 0 R
+				72 0 R
+				73 0 R
+				74 0 R
+				75 0 R
+				76 0 R
 				68 0 R
 			]
 		/Contents 66 0 R
@@ -12126,7 +12131,72 @@ endobj
 	>>
 endobj
 
+72 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [50 194 117 205]
+		/A
+			<<	/URI (https://ecs.toranoana.jp/tora/ec/item/040030845833/)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
+73 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [160 194 277 205]
+		/A
+			<<	/URI (https://25th-anniv.toranoana.jp/toramatsuri/)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
+74 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [204 183 254 193]
+		/A
+			<<	/URI (https://techbookfest.org/event/tbf09)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
+75 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [40 130 122 143]
+		/A
+			<<	/URI (http://yuma.ohgami.jp/Introduction-to-x86_64-Machine-Language/)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
+76 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [185 37 228 49]
+		/A
+			<<	/URI (https://yohgami.booth.pm/items/2265684)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
 trailer
-	<<	/Size 71
+	<<	/Size 76
 		/Root 1 0 R
 	>>
