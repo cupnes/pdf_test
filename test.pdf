@@ -37,8 +37,9 @@ endobj
 				48 0 R	% youtube
 				59 0 R	% amado
 				65 0 R	% editor's note(p1)
+				69 0 R	% editor's note(p2)
 			]
-		/Count 10
+		/Count 11
 	>>
 endobj
 
@@ -11722,7 +11723,7 @@ endobj
 		/Parent 3 0 R
 		/Annots	[
 				9 0 R
-				34 0 R
+				68 0 R
 			]
 		/Contents 66 0 R
 	>>
@@ -11924,7 +11925,86 @@ stream
 	/F2 10.5 Tf[<B0>-5<1A>10<6627>6<1C>]TJ
 	ET
 	BT
-	19.1 18.4 Td
+	293 20 Td
+	<57>Tj
+	ET
+endstream
+endobj
+
+67 0 obj
+	<<	/Type /Annot
+		/Subtype /Link
+		/Rect [165 105 229 150]
+		/Border [0 0 0]
+		/Dest [65 0 R /Fit]
+	>>
+endobj
+
+68 0 obj
+	<<	/Type /Annot
+		/Subtype /Link
+		/Rect [292 18 305 30]
+		/Border [0 0 0]
+		/Dest [69 0 R /Fit]
+	>>
+endobj
+
+69 0 obj
+	<<	/Type /Page
+		/Parent 3 0 R
+		/Annots	[
+				9 0 R
+				71 0 R
+			]
+		/Contents 70 0 R
+	>>
+endobj
+
+70 0 obj
+	<<	>>
+stream
+	% Fill the background with a solid color
+	0.76 0.78 0.80 RG
+	0.76 0.78 0.80 rg
+	0 0 320 240 re
+	B
+
+	% Draw the window
+	0.06 0.06 0.08 RG	% black line color
+	0.76 0.77 0.78 rg	% system color
+	10 10 300 220 re
+	B
+	0.06 0.06 0.08 RG
+	1.00 1.00 1.00 rg
+	12 12 296 216 re
+	B
+	0.06 0.06 0.08 RG
+	0.00 0.00 0.67 rg
+	12 213 281 15 re
+	B
+	0.06 0.06 0.08 RG
+	0.76 0.77 0.78 rg
+	293 213 15 15 re
+	B
+	0.06 0.06 0.08 rg
+	296 216 m
+	305 225 l
+	296 225 m
+	305 216 l
+	B
+
+	1 1 1 rg
+
+	% Title text
+	BT
+	20 217 Td
+	/F3 10.5 Tf[<10>10<1112>10<13>]TJ
+	ET
+
+	0 0 0 rg
+
+	BT
+	19.1 195.4 Td
 	/F2 10.5 Tf<2A>Tj
 	/F2 10.5 Tf[<18>7<B8>5<2E>-4<0405>]TJ
 	/F2 10.5 Tf[<06>2<07>4<08>]TJ
@@ -11940,7 +12020,7 @@ stream
 	/F2 10.5 Tf[<F7>13<3917>15<66>]TJ
 	ET
 	BT
-	19.1 8 Td
+	19.1 185 Td
 	/F2 10.5 Tf[<19>3<0E>6<14>]TJ
 	/F2 10.5 Tf[<0A>15<0B>]TJ
 	/F2 10.5 Tf[<11>8<7A>]TJ
@@ -11956,19 +12036,97 @@ stream
 	/F2 10.5 Tf[<45>8<9C>10<12>5<1B>13<1C>]TJ
 	/F2 10.5 Tf<2D>Tj
 	ET
+	BT
+	19.1 164.1 Td
+	/F2 10.5 Tf[<8D>5<24>6<8E>4<38>6<24>6<1F>7<9E09>-1<5B>10<5C>10<12>5<13>9<14>1<59>10<5A53>10<05>]TJ
+	/F3 10.5 Tf<76>Tj
+	/F2 10.5 Tf[<55>10<12>5<B6>]TJ
+	/F3 10.5 Tf[<77>10<78>]TJ
+	/F2 10.5 Tf<9C>Tj
+	/F3 10.5 Tf[<79>-4<24>]TJ
+	/F2 10.5 Tf<0C27>Tj
+	ET
+	BT
+	19.1 153.7 Td
+	/F2 10.5 Tf[<42>-1<2E>5<E76617>]TJ
+	/F3 10.5 Tf<7A7B>Tj
+	/F2 10.5 Tf[<6619>3<9F>-3<27>6<E8>10<E99D>9<18>7<6D>]TJ
+	/F3 10.5 Tf<24>Tj
+	/F2 10.5 Tf[<45>8<15>11<D6>2<EB>10<45>8<9C>10<18>-1<0E>]TJ
+	/F3 10.5 Tf<28>Tj
+	/F2 10.5 Tf<67>Tj
+	/F3 10.5 Tf<24>Tj
+	/F2 10.5 Tf<0C27>Tj
+	ET
+	BT
+	19.1 143.3 Td
+	/F2 10.5 Tf[<05>8<12>15<2E>-4<4B>3<5E>-1<25>11<0405>]TJ
+	/F2 10.5 Tf[<06>2<07>4<08>]TJ
+	/F2 10.5 Tf[<9E>10<12>5<47>5<14>]TJ
+	/F3 10.5 Tf[<7C>10<207D>10<7E>]TJ
+	/F2 10.5 Tf[<12>5<13>9<27>-3<05>8<09>]TJ
+	/F3 10.5 Tf<7F>Tj
+	/F2 10.5 Tf[<45>8<0C27>6<45>8<18>]TJ
+	ET
+	BT
+	19.1 132.9 Td
+	/F2 10.5 Tf<3D>Tj
+	/F3 10.5 Tf<6F>Tj
+	/F2 10.5 Tf[<0E>-2<1A>10<1B>4<1C>]TJ
+	ET
+	BT
+	19.1 112 Td
+	/F3 10.5 Tf<80>Tj
+	/F2 10.5 Tf[<17>5<D9>-1<15>11<2E>]TJ
+	/F3 10.5 Tf[<41>10<81>]TJ
+	/F2 10.5 Tf<9D>Tj
+	/F3 10.5 Tf[<82>10<83>]TJ
+	/F2 10.5 Tf<25>Tj
+	/F3 10.5 Tf[<16>10<69>]TJ
+	/F2 10.5 Tf<2A>Tj
+	/F3 10.5 Tf<84>Tj
+	/F2 10.5 Tf<2D>Tj
+	/F2 10.5 Tf[<E6>10<1B>4<043D11>8<12>15<1319>]TJ
+	/F3 10.5 Tf<7F>Tj
+	/F2 10.5 Tf[<45>8<0C27>-3<12>15<1B>4<1C>]TJ
+	ET
+	BT
+	19.1 101.6 Td
+	/F2 10.5 Tf<0405>Tj
+	/F3 10.5 Tf<12>Tj
+	/F2 10.5 Tf[<09>7<43>-5<24>6<DF>3<24>-3<32>7<7D>10<E06F>10<1017>15<4114>11<3D>]TJ
+	/F3 10.5 Tf<6F>Tj
+	/F2 10.5 Tf[<16>7<05>8<12>15<1B>4<11>8<2E>]TJ
+	/F3 10.5 Tf[<85>10<86>]TJ
+	/F2 10.5 Tf[<10>10<0C27>]TJ
+	ET
+	BT
+	19.1 91.2 Td
+	/F2 10.5 Tf[<42>-1<66>9<27>-3<47>5<3D2E>5<70>2<16>7<0E>-2<0C27>6<43>3<2F4F>4<03>5<3C>4<4F>-4<17>]TJ
+	/F3 10.5 Tf<8788>Tj
+	/F2 10.5 Tf[<15>1<16>7<45>8<2E>-4<4A>10<56>]TJ
+	/F3 10.5 Tf<89>Tj
+	/F2 10.5 Tf<9F>Tj
+	/F3 10.5 Tf<67>Tj
+	/F2 10.5 Tf[<1C>-4<1C>5<1C>]TJ
+	ET
+	BT
+	293 20 Td
+	<58>Tj
+	ET
 endstream
 endobj
 
-67 0 obj
+71 0 obj
 	<<	/Type /Annot
 		/Subtype /Link
-		/Rect [165 105 229 150]
+		/Rect [292 18 305 30]
 		/Border [0 0 0]
 		/Dest [65 0 R /Fit]
 	>>
 endobj
 
 trailer
-	<<	/Size 67
+	<<	/Size 71
 		/Root 1 0 R
 	>>
