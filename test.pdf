@@ -11959,6 +11959,9 @@ endobj
 		/Parent 3 0 R
 		/Annots	[
 				9 0 R
+				77 0 R
+				78 0 R
+				79 0 R
 				71 0 R
 			]
 		/Contents 70 0 R
@@ -12196,7 +12199,42 @@ endobj
 	>>
 endobj
 
+77 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [250 193 300 206]
+		/A
+			<<	/URI (https://ja.wikipedia.org/wiki/Microsoft_Windows_3.x)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
+78 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [18 183 62 195]
+		/A
+			<<	/URI (https://ja.wikipedia.org/wiki/Microsoft_Windows_3.x)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
+79 0 obj
+	<<	/Type /Annot
+		/Subtype /Link
+		/Rect [56 100 147 111]
+		/Border [0 0 0]
+		/Dest [40 0 R /Fit]
+	>>
+endobj
+
 trailer
-	<<	/Size 76
+	<<	/Size 79
 		/Root 1 0 R
 	>>
