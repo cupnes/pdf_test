@@ -12903,13 +12903,6 @@ endobj
 	>>
 endobj
 
-100 0 obj
-	<<	/Params	<<	/FlashVars (source=tam-n18.mp3&autoPlay=true&volume=1.00)
-				/Binding /Background
-			>>
-	>>
-endobj
-
 101 0 obj
 	<<	/Type /Filespec
 		/F (tam-n18.mp3)
@@ -20742,8 +20735,7 @@ endstream
 endobj
 
 103 0 obj
-	<<
-		/Subtype /Sound
+	<<	/Subtype /Sound
 	>>
 endobj
 
