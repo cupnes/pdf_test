@@ -12909,7 +12909,9 @@ endobj
 					>>
 		/Rect [190.614 163.538 290.253 230.144]
 		/P 97 0 R
-		/RichMediaContent 108 0 R
+		/RichMediaContent	<<	/Configurations [108 0 R]
+						/Assets << /Names [(þÿ t a m - n 1 8 . m p 3) 106 0 R] >>
+					>>
 		/BS	<<	/Type /Border
 				/W 0
 				/S /S
@@ -20868,18 +20870,12 @@ endstream
 endobj
 
 108 0 obj
-	<<	/Configurations [109 0 R]
-		/Assets << /Names [(þÿ t a m - n 1 8 . m p 3) 106 0 R] >>
-	>>
-endobj
-
-109 0 obj
-	<<	/Instances [110 0 R]
+	<<	/Instances [109 0 R]
 		/Subtype /Sound
 	>>
 endobj
 
-110 0 obj
+109 0 obj
 	<<	/Params	<<	/FlashVars (source=tam-n18.mp3&autoPlay=true&volume=1.00)
 				/Binding /Background
 			>>
@@ -20887,6 +20883,6 @@ endobj
 endobj
 
 trailer
-	<<	/Size 110
+	<<	/Size 109
 		/Root 1 0 R
 	>>
