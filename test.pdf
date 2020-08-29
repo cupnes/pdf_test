@@ -12869,19 +12869,19 @@ stream
 	% Title text
 	BT
 	20 217 Td
-	/F2 10.5 Tf
-	[<48>8<24>6<FE>]TJ
-	/F3 10.5 Tf
-	<4D>Tj
-	/F2 10.5 Tf
-	<31>Tj
-	/F3 10.5 Tf
-	<4E>Tj
-	/F2 10.5 Tf
-	<A9>Tj
+	/F3 10.5 Tf<65>Tj
+	/F2 10.5 Tf[<24>-3<FA>7<30>]TJ
+	/F3 10.5 Tf<65>Tj
+	/F2 10.5 Tf[<03>5<72>10<1F>7<73>4<24>]TJ
 	ET
 
 	0 0 0 rg
+
+	BT
+	30 180 Td
+	/F2 10.5 Tf[<47>5<0411>8<5E>]TJ
+	/F3 10.5 Tf<85>Tj
+	ET
 endstream
 endobj
 
@@ -12891,9 +12891,12 @@ endobj
 endobj
 
 100 0 obj
-	<<	/Subtype /RichMedia
+	<<	/Type /Annot
 		/Border [1 1 1]
-		/Type /Annot
+		% /Rect [190.614 163.538 290.253 230.144]
+		/Rect [28 178 80 191]
+		% /Subtype /Link /Dest [17 0 R /Fit]
+		/Subtype /RichMedia
 		/RichMediaSettings	<<	/Deactivation	<<	/Condition /XD
 									/Type /RichMediaDeactivation
 								>>
@@ -12901,7 +12904,6 @@ endobj
 									/Type /RichMediaActivation
 								>>
 					>>
-		/Rect [190.614 163.538 290.253 230.144]
 		/RichMediaContent	<<	/Configurations [99 0 R]
 						/Assets << /Names [(þÿ t a m - n 1 8 . m p 3) 101 0 R] >>
 					>>
