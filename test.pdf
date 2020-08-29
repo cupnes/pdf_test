@@ -42,8 +42,9 @@ endobj
 				80 0 R	% about bonus
 				84 0 R	% bonus1
 				88 0 R	% bonus2
+				93 0 R	% version
 			]
-		/Count 14
+		/Count 15
 	>>
 endobj
 
@@ -1217,6 +1218,7 @@ endobj
 				82 0 R
 				86 0 R
 				90 0 R
+				95 0 R
 			]
 		/Contents 18 0 R
 	>>
@@ -12685,7 +12687,142 @@ stream
 endstream
 endobj
 
+93 0 obj
+	<<	/Type /Page
+		/Parent 3 0 R
+		/Annots	[
+				9 0 R
+				96 0 R
+			]
+		/Contents 94 0 R
+	>>
+endobj
+
+94 0 obj
+	<<	>>
+stream
+	% Fill the background with a solid color
+	0.76 0.78 0.80 RG
+	0.76 0.78 0.80 rg
+	0 0 320 240 re
+	B
+
+	% Draw the window
+	0.06 0.06 0.08 RG	% black line color
+	0.76 0.77 0.78 rg	% system color
+	10 10 300 220 re
+	B
+	0.06 0.06 0.08 RG
+	1.00 1.00 1.00 rg
+	12 12 296 216 re
+	B
+	0.06 0.06 0.08 RG
+	0.00 0.00 0.67 rg
+	12 213 281 15 re
+	B
+	0.06 0.06 0.08 RG
+	0.76 0.77 0.78 rg
+	293 213 15 15 re
+	B
+	0.06 0.06 0.08 rg
+	296 216 m
+	305 225 l
+	296 225 m
+	305 216 l
+	B
+
+	1 1 1 rg
+
+	% Title text
+	BT
+	20 217 Td
+	/F2 10.5 Tf
+	[<48>8<24>6<FE>]TJ
+	/F3 10.5 Tf
+	<4D>Tj
+	/F2 10.5 Tf
+	<31>Tj
+	/F3 10.5 Tf
+	<4E>Tj
+	/F2 10.5 Tf
+	<A9>Tj
+	ET
+
+	0 0 0 rg
+
+	BT
+	19.1 195.4 Td
+	/F2 10.5 Tf[<48>8<24>6<FE>]TJ
+	/F3 10.5 Tf<4D>Tj
+	/F2 10.5 Tf<31>Tj
+	/F3 10.5 Tf<4E>Tj
+	/F2 10.5 Tf<A9>Tj
+	ET
+	BT
+	19.1 174.5 Td
+	/F2 10.5 Tf[<40>8<17>5<6B6C>8<6D>5<19>3<76>10<65>10<A9AA>]TJ
+	/F2 10.5 Tf<ABACABAC>Tj
+	/F2 10.5 Tf[<ADAE>10<AF>]TJ
+	/F2 10.5 Tf[<2A06>2<07>4<08>]TJ
+	/F2 10.5 Tf<9E>Tj
+	/F2 10.5 Tf[<2D84>3<BE>]TJ
+	/F3 10.5 Tf<4F05>Tj
+	/F2 10.5 Tf<ACAC>Tj
+	ET
+	BT
+	19.1 153.6 Td
+	/F2 10.5 Tf[<3B>7<3B>7<24>6<4E>]TJ
+	/F3 10.5 Tf[<50>10<51>]TJ
+	/F2 10.5 Tf<ABACABAC>Tj
+	/F2 10.5 Tf<AD>Tj
+	/F2 10.5 Tf<98>Tj
+	/F3 10.5 Tf<52>Tj
+	/F3 10.5 Tf<4F>Tj
+	/F2 10.5 Tf<AB>Tj
+	/F3 10.5 Tf<50>Tj
+	ET
+	BT
+	19.1 143.2 Td
+	/F2 10.5 Tf<10>Tj
+	/F3 10.5 Tf[<5354>10<54>]TJ
+	/F2 10.5 Tf<84>Tj
+	/F3 10.5 Tf<51>Tj
+	/F2 10.5 Tf[<77>10<78>]TJ
+	/F3 10.5 Tf[<54>10<55>]TJ
+	/F2 10.5 Tf<E9>Tj
+	ET
+	BT
+	19.1 122.3 Td
+	/F3 10.5 Tf<56>Tj
+	/F2 10.5 Tf<ABACABAC84>Tj
+	/F2 10.5 Tf[<40>8<17>5<6B6C>8<6D>5<19>]TJ
+	ET
+endstream
+endobj
+
+95 0 obj
+	<<	/Type /Annot
+		/Subtype /Link
+		/Rect [68 200 138 212]
+		/Border [0 0 0]
+		/Dest [93 0 R /Fit]
+	>>
+endobj
+
+96 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [69 141 121 153]
+		/A
+			<<	/URI (http://yuma.ohgami.jp/)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
 trailer
-	<<	/Size 92
+	<<	/Size 96
 		/Root 1 0 R
 	>>
