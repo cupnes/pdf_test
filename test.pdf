@@ -12414,6 +12414,7 @@ endobj
 		/Parent 3 0 R
 		/Annots	[
 				9 0 R
+				87 0 R
 			]
 		/Contents 85 0 R
 	>>
@@ -12559,7 +12560,20 @@ endobj
 	>>
 endobj
 
+87 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [108 162 276 174]
+		/A
+			<<	/URI (https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%8A%E3%83%9F%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
 trailer
-	<<	/Size 86
+	<<	/Size 87
 		/Root 1 0 R
 	>>
