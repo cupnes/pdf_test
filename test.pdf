@@ -25,7 +25,8 @@ endobj
 						>>
 				>>
 		/MediaBox [0 0 320 240]
-		/Kids	[	32 0 R	% help
+		/Kids	[	97 0 R	% audio player
+				32 0 R	% help
 				17 0 R	% file list
 				15 0 R	% title
 				4 0 R	% intro(p1)
@@ -40,7 +41,7 @@ endobj
 				84 0 R	% bonus1
 				88 0 R	% bonus2
 				93 0 R	% version
-				97 0 R	% audio player
+				% 97 0 R	% audio player
 			]
 		/Count 16
 	>>
@@ -20868,7 +20869,7 @@ endobj
 
 108 0 obj
 	<<	/Configurations [109 0 R]
-		/Assets 112 0 R
+		/Assets << /Names [(þÿ t a m - n 1 8 . m p 3) 106 0 R] >>
 	>>
 endobj
 
@@ -20879,23 +20880,13 @@ endobj
 endobj
 
 110 0 obj
-	<<	/Params 111 0 R
-		/Asset 106 0 R
-	>>
-endobj
-
-111 0 obj
-	<<	/FlashVars (source=tam-n18.mp3&autoPlay=true&volume=1.00)
-		/Binding /Background
-	>>
-endobj
-
-112 0 obj
-	<<	/Names [(þÿ t a m - n 1 8 . m p 3) 106 0 R]
+	<<	/Params	<<	/FlashVars (source=tam-n18.mp3&autoPlay=true&volume=1.00)
+				/Binding /Background
+			>>
 	>>
 endobj
 
 trailer
-	<<	/Size 112
+	<<	/Size 110
 		/Root 1 0 R
 	>>
