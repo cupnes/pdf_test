@@ -12878,7 +12878,7 @@ stream
 	0 0 0 rg
 
 	BT
-	30 180 Td
+	19.1 195.4 Td
 	/F2 10.5 Tf[<47>5<0411>8<5E>]TJ
 	/F3 10.5 Tf<85>Tj
 	ET
@@ -12894,16 +12894,16 @@ endobj
 	<<	/Type /Annot
 		/Border [1 1 1]
 		% /Rect [190.614 163.538 290.253 230.144]
-		/Rect [28 178 80 191]
+		/Rect [22 22 298 188]
 		% /Subtype /Link /Dest [17 0 R /Fit]
 		/Subtype /RichMedia
-		/RichMediaSettings	<<	/Deactivation	<<	/Condition /XD
-									/Type /RichMediaDeactivation
-								>>
-						/Activation	<<	/Condition /XA
-									/Type /RichMediaActivation
-								>>
-					>>
+		% /RichMediaSettings	<<	/Deactivation	<<	/Condition /XD
+		% 							/Type /RichMediaDeactivation
+		% 						>>
+		% 				/Activation	<<	/Condition /XA
+		% 							/Type /RichMediaActivation
+		% 						>>
+		% 			>>
 		/RichMediaContent	<<	/Configurations [99 0 R]
 						/Assets << /Names [(þÿ t a m - n 1 8 . m p 3) 101 0 R] >>
 					>>
