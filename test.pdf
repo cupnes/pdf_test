@@ -12692,6 +12692,7 @@ endobj
 		/Annots	[
 				9 0 R
 				96 0 R
+				100 0 R
 			]
 		/Contents 94 0 R
 	>>
@@ -12825,71 +12826,6 @@ endobj
 	>>
 endobj
 
-97 0 obj
-	<<	/Type /Page
-		/Parent 3 0 R
-		/Annots	[
-				9 0 R
-				100 0 R
-			]
-		/Contents 98 0 R
-	>>
-endobj
-
-98 0 obj
-	<<	>>
-stream
-	% Fill the background with a solid color
-	0.76 0.78 0.80 RG
-	0.76 0.78 0.80 rg
-	0 0 320 240 re
-	B
-
-	% Draw the window
-	0.06 0.06 0.08 RG	% black line color
-	0.76 0.77 0.78 rg	% system color
-	10 10 300 220 re
-	B
-	0.06 0.06 0.08 RG
-	1.00 1.00 1.00 rg
-	12 12 296 216 re
-	B
-	0.06 0.06 0.08 RG
-	0.00 0.00 0.67 rg
-	12 213 281 15 re
-	B
-	0.06 0.06 0.08 RG
-	0.76 0.77 0.78 rg
-	293 213 15 15 re
-	B
-	0.06 0.06 0.08 rg
-	296 216 m
-	305 225 l
-	296 225 m
-	305 216 l
-	B
-
-	1 1 1 rg
-
-	% Title text
-	BT
-	20 217 Td
-	/F3 10.5 Tf<65>Tj
-	/F2 10.5 Tf[<24>-3<FA>7<30>]TJ
-	/F3 10.5 Tf<65>Tj
-	/F2 10.5 Tf[<03>5<72>10<1F>7<73>4<24>]TJ
-	ET
-
-	0 0 0 rg
-
-	BT
-	19.1 195.4 Td
-	/F2 10.5 Tf[<47>5<0411>8<5E>]TJ
-	/F3 10.5 Tf<85>Tj
-	ET
-endstream
-endobj
-
 99 0 obj
 	<<	/Subtype /Sound
 	>>
@@ -12898,17 +12834,16 @@ endobj
 100 0 obj
 	<<	/Type /Annot
 		/Border [1 1 1]
-		% /Rect [190.614 163.538 290.253 230.144]
-		/Rect [22 22 298 188]
+		/Rect [117 22 298 145]
 		% /Subtype /Link /Dest [17 0 R /Fit]
 		/Subtype /RichMedia
-		% /RichMediaSettings	<<	/Deactivation	<<	/Condition /XD
-		% 							/Type /RichMediaDeactivation
-		% 						>>
-		% 				/Activation	<<	/Condition /XA
-		% 							/Type /RichMediaActivation
-		% 						>>
-		% 			>>
+		/RichMediaSettings	<<	/Deactivation	<<	/Condition /XD
+									/Type /RichMediaDeactivation
+								>>
+						/Activation	<<	/Condition /XA
+									/Type /RichMediaActivation
+								>>
+					>>
 		/RichMediaContent	<<	/Configurations [99 0 R]
 						/Assets << /Names [(þÿ t a m - n 1 8 . m p 3) 101 0 R] >>
 					>>
@@ -12918,7 +12853,7 @@ endobj
 101 0 obj
 	<<	/Type /Filespec
 		/F (tam-n18.mp3)
-		/EF << /F 102 0 R >>
+		/EF << /F 103 0 R >>
 	>>
 endobj
 
