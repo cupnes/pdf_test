@@ -12261,7 +12261,10 @@ endobj
 80 0 obj
 	<<	/Type /Page
 		/Parent 3 0 R
-		/Annots [9 0 R]
+		/Annots	[
+				9 0 R
+				83 0 R
+			]
 		/Contents 81 0 R
 	>>
 endobj
@@ -12391,7 +12394,20 @@ endobj
 	>>
 endobj
 
+83 0 obj
+	<<	/Border [0 0 0]
+		/Subtype /Link
+		/Type /Annot
+		/Rect [154 118 237 133]
+		/A
+			<<	/URI (https://charat.me/origin/)
+				/Type /Action
+				/S /URI
+			>>
+	>>
+endobj
+
 trailer
-	<<	/Size 82
+	<<	/Size 83
 		/Root 1 0 R
 	>>
