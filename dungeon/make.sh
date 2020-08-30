@@ -3,6 +3,8 @@
 set -uex
 # set -ue
 
+MAP_FILE=$1
+
 X0=12
 X1=61.33
 X2=110.66
@@ -69,17 +71,180 @@ draw_wall() {
 
 width=0
 height=0
-map=''
-
-load_map() {
+load_map_attr() {
 	local f=$1
 	width=$(head -n 1 $f | cut -d' ' -f1)
 	height=$(head -n 1 $f | cut -d' ' -f2)
-	map=$(tail -n +2 $f)
 }
 
-load_map $1
-echo "width=$width, height=$height"
-for row in $map; do
-	echo "row=$row"
-done
+get_lfr() {
+	local wall_stat=$1
+	local wnes=$(echo "obase=2;ibase=16;1$wall_stat" | bc | cut -c2-5)
+	local d=$2
+	local l
+	local f
+	local r
+	case $d in
+	w)
+		l=$(echo $wnes | cut -c4)
+		f=$(echo $wnes | cut -c1)
+		r=$(echo $wnes | cut -c2)
+		;;
+	n)
+		l=$(echo $wnes | cut -c1)
+		f=$(echo $wnes | cut -c2)
+		r=$(echo $wnes | cut -c3)
+		;;
+	e)
+		l=$(echo $wnes | cut -c2)
+		f=$(echo $wnes | cut -c3)
+		r=$(echo $wnes | cut -c4)
+		;;
+	s)
+		l=$(echo $wnes | cut -c3)
+		f=$(echo $wnes | cut -c4)
+		r=$(echo $wnes | cut -c1)
+		;;
+	esac
+	echo "$l$f$r"
+}
+
+# 1 <= x <= $width
+# 1 <= y <= $height
+get_wall_stat() {
+	local x=$1
+	local y=$2
+	echo $(sed -n $((y + 2))p $MAP_FILE | cut -c$((x + 1)))
+}
+
+get_next_wall_stat() {
+	local x=$1
+	local y=$2
+	local d=$3
+
+	local wall_stat
+
+	case $d in
+	w)
+		wall_stat=$(get_wall_stat $((x - 1)) $y)
+		;;
+	n)
+		wall_stat=$(get_wall_stat $x $((y - 1)))
+		;;
+	e)
+		wall_stat=$(get_wall_stat $((x + 1)) $y)
+		;;
+	s)
+		wall_stat=$(get_wall_stat $x $((y + 1)))
+		;;
+	esac
+	echo $wall_stat
+}
+
+get_next_left_wall_stat_direction() {
+	local x=$1
+	local y=$2
+	local d=$3
+
+	local wall_stat
+	local nd
+
+	case $d in
+	w)
+		wall_stat=$(get_wall_stat $((x - 1)) $((y + 1)))
+		nd=s
+		;;
+	n)
+		wall_stat=$(get_wall_stat $((x - 1)) $((y - 1)))
+		nd=w
+		;;
+	e)
+		wall_stat=$(get_wall_stat $((x + 1)) $((y - 1)))
+		nd=n
+		;;
+	s)
+		wall_stat=$(get_wall_stat $((x + 1)) $((y + 1)))
+		nd=e
+		;;
+	esac
+	echo "$wall_stat$nd"
+}
+
+get_next_right_wall_stat_direction() {
+	local x=$1
+	local y=$2
+	local d=$3
+
+	local wall_stat
+	local nd
+
+	case $d in
+	w)
+		wall_stat=$(get_wall_stat $((x - 1)) $((y - 1)))
+		nd=n
+		;;
+	n)
+		wall_stat=$(get_wall_stat $((x + 1)) $((y - 1)))
+		nd=e
+		;;
+	e)
+		wall_stat=$(get_wall_stat $((x + 1)) $((y + 1)))
+		nd=s
+		;;
+	s)
+		wall_stat=$(get_wall_stat $((x - 1)) $((y + 1)))
+		nd=w
+		;;
+	esac
+	echo "$wall_stat$nd"
+}
+
+# 1 <= x <= $width
+# 1 <= y <= $height
+# d in 'w' 'n' 'e' 's'
+draw_wall_xyd() {
+	local x=$1
+	local y=$2
+	local d=$3
+
+	local wall_stat
+	local wall_stat_d
+	local lfr
+
+	local cl
+	local cf
+	local cr
+	local nl
+	local nf
+	local nr
+	local ll
+	local lr
+	local rl
+	local rr
+
+	wall_stat=$(get_wall_stat $x $y)
+	lfr=$(get_lfr $wall_stat $d)
+	cl=$(echo $lfr | cut -c1)
+	cf=$(echo $lfr | cut -c2)
+	cr=$(echo $lfr | cut -c3)
+
+	wall_stat=$(get_next_wall_stat $x $y $d)
+	lfr=$(get_lfr $wall_stat $d)
+	nl=$(echo $lfr | cut -c1)
+	nf=$(echo $lfr | cut -c2)
+	nr=$(echo $lfr | cut -c3)
+
+	wall_stat_d=$(get_next_left_wall_stat_direction $x $y $d)
+	lfr=$(get_lfr $(echo $wall_stat_d | cut -c1) $(echo $wall_stat_d | cut -c2))
+	ll=$(echo $lfr | cut -c1)
+	lr=$(echo $lfr | cut -c3)
+
+	wall_stat_d=$(get_next_right_wall_stat_direction $x $y $d)
+	lfr=$(get_lfr $(echo $wall_stat_d | cut -c1) $(echo $wall_stat_d | cut -c2))
+	rl=$(echo $lfr | cut -c1)
+	rr=$(echo $lfr | cut -c3)
+
+	draw_wall $cl $cf $cr $nl $nf $nr $ll $lr $rl $rr
+}
+
+draw_wall_xyd $2 $3 $4
