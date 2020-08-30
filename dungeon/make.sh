@@ -67,4 +67,19 @@ draw_wall() {
 	fi
 }
 
-draw_wall $1 $2 $3 $4 $5 $6 $7 $8 $9 $10
+width=0
+height=0
+map=''
+
+load_map() {
+	local f=$1
+	width=$(head -n 1 $f | cut -d' ' -f1)
+	height=$(head -n 1 $f | cut -d' ' -f2)
+	map=$(tail -n +2 $f)
+}
+
+load_map $1
+echo "width=$width, height=$height"
+for row in $map; do
+	echo "row=$row"
+done
