@@ -1,9 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 
 set -uex
 # set -ue
 
 MAP_FILE=$1
+CONTENTS_HEAD_TMPL=contents_head.tmpl
+CONTENTS_FOOT_TMPL=contents_foot.tmpl
+DRAW_WALL_INDENT='\t'
 
 X0=12
 X1=61.33
@@ -28,43 +31,43 @@ draw_wall() {
 	local ll=$7
 	local lr=$8
 	local rl=$9
-	local rr=$10
+	local rr=${10}
 
 	if [ $cf -eq 1 ]; then
-		echo "$X1 $Y1 m $X1 $Y4 l $X4 $Y4 l $X4 $Y1 l $X1 $Y1 l"
+		echo -e "$DRAW_WALL_INDENT$X1 $Y1 m $X1 $Y4 l $X4 $Y4 l $X4 $Y1 l $X1 $Y1 l"
 	else
 		if [ $nf -eq 1 ]; then
-			echo "$X2 $Y2 m $X2 $Y3 l $X3 $Y3 l $X3 $Y2 l $X2 $Y2 l"
+			echo -e "$DRAW_WALL_INDENT$X2 $Y2 m $X2 $Y3 l $X3 $Y3 l $X3 $Y2 l $X2 $Y2 l"
 		fi
 		if [ $nl -eq 1 ]; then
-			echo "$X1 $Y1 m $X1 $Y4 l $X2 $Y3 l $X2 $Y2 l $X1 $Y1 l"
+			echo -e "$DRAW_WALL_INDENT$X1 $Y1 m $X1 $Y4 l $X2 $Y3 l $X2 $Y2 l $X1 $Y1 l"
 		elif [ $lr -eq 1 ]; then
-			echo "$X1 $Y2 m $X2 $Y2 l $X2 $Y3 l $X1 $Y3 l"
+			echo -e "$DRAW_WALL_INDENT$X1 $Y2 m $X2 $Y2 l $X2 $Y3 l $X1 $Y3 l"
 		fi
 		if [ $nr -eq 1 ]; then
-			echo "$X3 $Y2 m $X3 $Y3 l $X4 $Y4 l $X4 $Y1 l $X3 $Y2 l"
+			echo -e "$DRAW_WALL_INDENT$X3 $Y2 m $X3 $Y3 l $X4 $Y4 l $X4 $Y1 l $X3 $Y2 l"
 		elif [ $rl -eq 1 ]; then
-			echo "$X4 $Y2 m $X3 $Y2 l $X3 $Y3 l $X4 $Y3 l"
+			echo -e "$DRAW_WALL_INDENT$X4 $Y2 m $X3 $Y2 l $X3 $Y3 l $X4 $Y3 l"
 		fi
 	fi
 
 	if [ $cl -eq 1 ]; then
-		echo "$X0 $Y0 m $X1 $Y1 l $X1 $Y4 l $X0 $Y5 l"
+		echo -e "$DRAW_WALL_INDENT$X0 $Y0 m $X1 $Y1 l $X1 $Y4 l $X0 $Y5 l"
 	else
 		if [ $ll -eq 1 ]; then
-			echo "$X0 $Y1 m $X1 $Y1 l $X1 $Y4 l $X0 $Y4 l"
+			echo -e "$DRAW_WALL_INDENT$X0 $Y1 m $X1 $Y1 l $X1 $Y4 l $X0 $Y4 l"
 		elif [ $lr -eq 1 ]; then
-			echo "$X0 $Y2 m $X1 $Y2 l $X0 $Y3 m $X1 $Y3 l"
+			echo -e "$DRAW_WALL_INDENT$X0 $Y2 m $X1 $Y2 l $X0 $Y3 m $X1 $Y3 l"
 		fi
 	fi
 
 	if [ $cr -eq 1 ]; then
-		echo "$X5 $Y0 m $X4 $Y1 l $X4 $Y4 l $X5 $Y5 l"
+		echo -e "$DRAW_WALL_INDENT$X5 $Y0 m $X4 $Y1 l $X4 $Y4 l $X5 $Y5 l"
 	else
 		if [ $rr -eq 1 ]; then
-			echo "$X5 $Y1 m $X4 $Y1 l $X4 $Y4 l $X5 $Y4 l"
+			echo -e "$DRAW_WALL_INDENT$X5 $Y1 m $X4 $Y1 l $X4 $Y4 l $X5 $Y4 l"
 		elif [ $rl -eq 1 ]; then
-			echo "$X4 $Y2 m $X5 $Y2 l $X4 $Y3 m $X5 $Y3 l"
+			echo -e "$DRAW_WALL_INDENT$X4 $Y2 m $X5 $Y2 l $X4 $Y3 m $X5 $Y3 l"
 		fi
 	fi
 }
@@ -247,4 +250,15 @@ draw_wall_xyd() {
 	draw_wall $cl $cf $cr $nl $nf $nr $ll $lr $rl $rr
 }
 
-draw_wall_xyd $2 $3 $4
+make_a_contents_obj() {
+	local obj_id=$1
+	local x=$2
+	local y=$3
+	local d=$4
+
+	sed "s/OBJ_ID/$obj_id/" $CONTENTS_HEAD_TMPL
+	draw_wall_xyd $x $y $d
+	cat $CONTENTS_FOOT_TMPL
+}
+
+make_a_contents_obj 103 $2 $3 $4
