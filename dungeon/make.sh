@@ -4,9 +4,12 @@ set -uex
 # set -ue
 
 MAP_FILE=$1
+START_OBJ_ID=$2
+
 CONTENTS_HEAD_TMPL=contents_head.tmpl
 CONTENTS_FOOT_TMPL=contents_foot.tmpl
 DRAW_WALL_INDENT='\t'
+DIRECTION_LIST='w n e s'
 
 X0=12
 X1=61.33
@@ -21,6 +24,8 @@ Y3=146.2
 Y4=179.75
 Y5=213
 
+current_obj_id=0
+
 draw_wall() {
 	local cl=$1
 	local cf=$2
@@ -32,6 +37,8 @@ draw_wall() {
 	local lr=$8
 	local rl=$9
 	local rr=${10}
+
+	echo -e "${DRAW_WALL_INDENT}% DEBUG obj_id=$current_obj_id wall_pat=$cl$cf$cr$nl$nf$nr$ll$lr$rl$rr"
 
 	if [ $cf -eq 1 ]; then
 		echo -e "$DRAW_WALL_INDENT$X1 $Y1 m $X1 $Y4 l $X4 $Y4 l $X4 $Y1 l $X1 $Y1 l"
@@ -75,9 +82,8 @@ draw_wall() {
 width=0
 height=0
 load_map_attr() {
-	local f=$1
-	width=$(head -n 1 $f | cut -d' ' -f1)
-	height=$(head -n 1 $f | cut -d' ' -f2)
+	width=$(head -n 1 $MAP_FILE | cut -d' ' -f1)
+	height=$(head -n 1 $MAP_FILE | cut -d' ' -f2)
 }
 
 get_lfr() {
@@ -205,6 +211,54 @@ get_next_right_wall_stat_direction() {
 # 1 <= x <= $width
 # 1 <= y <= $height
 # d in 'w' 'n' 'e' 's'
+get_wall_pattern() {
+	local x=$1
+	local y=$2
+	local d=$3
+
+	local wall_stat
+	local wall_stat_d
+	local lfr
+
+	local cl
+	local cf
+	local cr
+	local nl
+	local nf
+	local nr
+	local ll
+	local lr
+	local rl
+	local rr
+
+	wall_stat=$(get_wall_stat $x $y)
+	lfr=$(get_lfr $wall_stat $d)
+	cl=$(echo $lfr | cut -c1)
+	cf=$(echo $lfr | cut -c2)
+	cr=$(echo $lfr | cut -c3)
+
+	wall_stat=$(get_next_wall_stat $x $y $d)
+	lfr=$(get_lfr $wall_stat $d)
+	nl=$(echo $lfr | cut -c1)
+	nf=$(echo $lfr | cut -c2)
+	nr=$(echo $lfr | cut -c3)
+
+	wall_stat_d=$(get_next_left_wall_stat_direction $x $y $d)
+	lfr=$(get_lfr $(echo $wall_stat_d | cut -c1) $(echo $wall_stat_d | cut -c2))
+	ll=$(echo $lfr | cut -c1)
+	lr=$(echo $lfr | cut -c3)
+
+	wall_stat_d=$(get_next_right_wall_stat_direction $x $y $d)
+	lfr=$(get_lfr $(echo $wall_stat_d | cut -c1) $(echo $wall_stat_d | cut -c2))
+	rl=$(echo $lfr | cut -c1)
+	rr=$(echo $lfr | cut -c3)
+
+	echo "$cl$cf$cr$nl$nf$nr$ll$lr$rl$rr"
+}
+
+# 1 <= x <= $width
+# 1 <= y <= $height
+# d in 'w' 'n' 'e' 's'
 draw_wall_xyd() {
 	local x=$1
 	local y=$2
@@ -251,14 +305,52 @@ draw_wall_xyd() {
 }
 
 make_a_contents_obj() {
-	local obj_id=$1
-	local x=$2
-	local y=$3
-	local d=$4
+	local x=$1
+	local y=$2
+	local d=$3
 
-	sed "s/OBJ_ID/$obj_id/" $CONTENTS_HEAD_TMPL
+	sed "s/OBJ_ID/$current_obj_id/" $CONTENTS_HEAD_TMPL
 	draw_wall_xyd $x $y $d
 	cat $CONTENTS_FOOT_TMPL
+	echo
+
+	current_obj_id=$((current_obj_id + 1))
 }
 
-make_a_contents_obj 103 $2 $3 $4
+make_contents_obj_all() {
+	local x
+	local y
+	local d
+	local wall_pat
+	local obj_id
+	local wall_pat_line
+
+	local work_dir=$(mktemp -d)
+	local t=$work_dir/contents.obj
+	local lst=$work_dir/coord_objid.lst
+
+	touch $t $lst
+	for y in $(seq $height); do
+		for x in $(seq $width); do
+			for d in $DIRECTION_LIST; do
+				wall_pat=$(get_wall_pattern $x $y $d)
+				wall_pat_line=$(grep "wall_pat=$wall_pat" $t || echo "none")
+				if [ "$wall_pat_line" = "none" ]; then
+					make_a_contents_obj $x $y $d >>$t
+					echo "$x $y $d $((current_obj_id - 1))" >>$lst
+				else
+					obj_id=$(echo $wall_pat_line | sed -r 's/^.+obj_id=([0-9]+).+$/\1/')
+					echo "$x $y $d $obj_id" >>$lst
+				fi
+			done
+		done
+	done
+
+	cat $t
+
+	# rm -rf $work_dir
+}
+
+current_obj_id=$START_OBJ_ID
+load_map_attr
+make_contents_obj_all
