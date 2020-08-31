@@ -27,6 +27,8 @@ Y3=146.2
 Y4=179.75
 Y5=213
 
+PAGES_OBJ_ID=3
+
 current_obj_id=0
 
 draw_wall() {
@@ -351,6 +353,37 @@ make_contents_obj_all() {
 	cat $t
 }
 
+make_page_obj_all() {
+	local x
+	local y
+	local d
+	local contents_obj_id
+
+	for y in $(seq $height); do
+		for x in $(seq $width); do
+			for d in $DIRECTION_LIST; do
+				contents_obj_id=$(grep "$x $y $d" $WORK_DIR/coord_objid.lst | cut -d' ' -f4)
+				echo -e "$current_obj_id 0 obj"
+				echo -e "\t<<\t/Type /Page"
+				echo -e "\t\t/Parent $PAGES_OBJ_ID 0 R"
+				echo -e "\t\t/Annots\t[\t<<\t/Type /Annot"
+				echo -e "\t\t\t\t\t/Subtype /Link"
+				echo -e "\t\t\t\t\t/Rect [293 213 308 228]"
+				echo -e "\t\t\t\t\t/Border [0 0 0]"
+				echo -e "\t\t\t\t\t/Dest [17 0 R /Fit]"
+				echo -e "\t\t\t\t>>"
+				echo -e "\t\t\t]"
+				echo -e "\t\t/Contents $contents_obj_id 0 R"
+				echo -e "\t>>"
+				echo 'endobj'
+				echo
+				current_obj_id=$((current_obj_id + 1))
+			done
+		done
+	done
+}
+
 current_obj_id=$START_OBJ_ID
 load_map_attr
 make_contents_obj_all
+make_page_obj_all
