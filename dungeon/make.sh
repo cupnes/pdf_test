@@ -6,6 +6,9 @@ set -uex
 MAP_FILE=$1
 START_OBJ_ID=$2
 
+WORK_DIR=$(mktemp -d)
+# trap "rm -rf $WORK_DIR" EXIT
+
 CONTENTS_HEAD_TMPL=contents_head.tmpl
 CONTENTS_FOOT_TMPL=contents_foot.tmpl
 DRAW_WALL_INDENT='\t'
@@ -325,9 +328,8 @@ make_contents_obj_all() {
 	local obj_id
 	local wall_pat_line
 
-	local work_dir=$(mktemp -d)
-	local t=$work_dir/contents.obj
-	local lst=$work_dir/coord_objid.lst
+	local t=$WORK_DIR/contents.obj
+	local lst=$WORK_DIR/coord_objid.lst
 
 	touch $t $lst
 	for y in $(seq $height); do
@@ -347,8 +349,6 @@ make_contents_obj_all() {
 	done
 
 	cat $t
-
-	# rm -rf $work_dir
 }
 
 current_obj_id=$START_OBJ_ID
