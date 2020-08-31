@@ -339,10 +339,10 @@ make_contents_obj_all() {
 				wall_pat_line=$(grep "wall_pat=$wall_pat" $t || echo "none")
 				if [ "$wall_pat_line" = "none" ]; then
 					make_a_contents_obj $x $y $d >>$t
-					echo "$x $y $d $((current_obj_id - 1))" >>$lst
+					echo "$x $y $d $((current_obj_id - 1)) $wall_pat" >>$lst
 				else
 					obj_id=$(echo $wall_pat_line | sed -r 's/^.+obj_id=([0-9]+).+$/\1/')
-					echo "$x $y $d $obj_id" >>$lst
+					echo "$x $y $d $obj_id $wall_pat" >>$lst
 				fi
 			done
 		done
