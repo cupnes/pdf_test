@@ -358,10 +358,10 @@ make_contents_obj_all() {
 				wall_pat_line=$(grep "wall_pat=$wall_pat" $t || echo "none")
 				if [ "$wall_pat_line" = "none" ]; then
 					make_a_contents_obj $x $y $d >>$t
-					echo "$x $y $d $((current_obj_id - 1)) $wall_pat" >>$lst
+					echo "$(printf '%02d' $x) $(printf '%02d' $y) $d $((current_obj_id - 1)) $wall_pat" >>$lst
 				else
 					obj_id=$(echo $wall_pat_line | sed -r 's/^.+obj_id=([0-9]+).+$/\1/')
-					echo "$x $y $d $obj_id $wall_pat" >>$lst
+					echo "$(printf '%02d' $x) $(printf '%02d' $y) $d $obj_id $wall_pat" >>$lst
 				fi
 			done
 		done
@@ -419,8 +419,8 @@ make_page_obj_all() {
 	for y in $(seq $height); do
 		for x in $(seq $width); do
 			for d in $DIRECTION_LIST; do
-				contents_obj_id=$(grep "$x $y $d" $COORD_OBJID_LST | cut -d' ' -f4)
-				front_wall=$(grep "$x $y $d" $COORD_OBJID_LST | cut -d' ' -f5 | cut -c2)
+				contents_obj_id=$(grep "$(printf '%02d' $x) $(printf '%02d' $y) $d" $COORD_OBJID_LST | cut -d' ' -f4)
+				front_wall=$(grep "$(printf '%02d' $x) $(printf '%02d' $y) $d" $COORD_OBJID_LST | cut -d' ' -f5 | cut -c2)
 
 				echo -e "$current_obj_id 0 obj"
 				echo -e "\t<<\t/Type /Page"
@@ -456,7 +456,7 @@ make_page_obj_all() {
 					echo -e "\t\t\t\t\t/Subtype /Link"
 					echo -e "\t\t\t\t\t/Rect [$GO_FORWARD_LLX $GO_FORWARD_LLY $GO_FORWARD_URX $GO_FORWARD_URY]"
 					echo -e "\t\t\t\t\t/Border [0 0 0]"
-					echo -e "\t\t\t\t\t/Dest [PAGEOBJID_${nx}_${ny}_${d} 0 R /Fit]"
+					echo -e "\t\t\t\t\t/Dest [PAGEOBJID_$(printf '%02d' $nx)_$(printf '%02d' $ny)_${d} 0 R /Fit]"
 					echo -e "\t\t\t\t>>"
 				fi
 
@@ -464,14 +464,14 @@ make_page_obj_all() {
 				echo -e "\t\t\t\t\t/Subtype /Link"
 				echo -e "\t\t\t\t\t/Rect [$TO_LEFT_LLX $TO_LEFT_LLY $TO_LEFT_URX $TO_LEFT_URY]"
 				echo -e "\t\t\t\t\t/Border [0 0 0]"
-				echo -e "\t\t\t\t\t/Dest [PAGEOBJID_${x}_${y}_$(turn_dir left $d) 0 R /Fit]"
+				echo -e "\t\t\t\t\t/Dest [PAGEOBJID_$(printf '%02d' $x)_$(printf '%02d' $y)_$(turn_dir left $d) 0 R /Fit]"
 				echo -e "\t\t\t\t>>"
 
 				echo -e "\t\t\t\t<<\t/Type /Annot"
 				echo -e "\t\t\t\t\t/Subtype /Link"
 				echo -e "\t\t\t\t\t/Rect [$TO_RIGHT_LLX $TO_RIGHT_LLY $TO_RIGHT_URX $TO_RIGHT_URY]"
 				echo -e "\t\t\t\t\t/Border [0 0 0]"
-				echo -e "\t\t\t\t\t/Dest [PAGEOBJID_${x}_${y}_$(turn_dir right $d) 0 R /Fit]"
+				echo -e "\t\t\t\t\t/Dest [PAGEOBJID_$(printf '%02d' $x)_$(printf '%02d' $y)_$(turn_dir right $d) 0 R /Fit]"
 				echo -e "\t\t\t\t>>"
 
 				echo -e "\t\t\t]"
@@ -480,7 +480,7 @@ make_page_obj_all() {
 				echo 'endobj'
 				echo
 
-				echo "$x $y $d $current_obj_id" >>$WORK_DIR/coord_pageobjid.lst
+				echo "$(printf '%02d' $x) $(printf '%02d' $y) $d $current_obj_id" >>$WORK_DIR/coord_pageobjid.lst
 				current_obj_id=$((current_obj_id + 1))
 			done
 		done
@@ -489,8 +489,8 @@ make_page_obj_all() {
 	for y in $(seq $height); do
 		for x in $(seq $width); do
 			for d in $DIRECTION_LIST; do
-				page_obj_id=$(grep "$x $y $d" $WORK_DIR/coord_pageobjid.lst | cut -d' ' -f4)
-				sed -i "s/PAGEOBJID_${x}_${y}_${d}/$page_obj_id/" $WORK_DIR/page.obj
+				page_obj_id=$(grep "$(printf '%02d' $x) $(printf '%02d' $y) $d" $WORK_DIR/coord_pageobjid.lst | cut -d' ' -f4)
+				sed -i "s/PAGEOBJID_$(printf '%02d' $x)_$(printf '%02d' $y)_${d}/$page_obj_id/" $WORK_DIR/page.obj
 			done
 		done
 	done
