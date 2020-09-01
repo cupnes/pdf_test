@@ -408,15 +408,20 @@ turn_dir() {
 
 make_page_obj_all() {
 	local x
+	local nx
 	local y
+	local ny
 	local d
 	local contents_obj_id
 	local page_obj_id
+	local wall_pat
 
 	for y in $(seq $height); do
 		for x in $(seq $width); do
 			for d in $DIRECTION_LIST; do
 				contents_obj_id=$(grep "$x $y $d" $COORD_OBJID_LST | cut -d' ' -f4)
+				front_wall=$(grep "$x $y $d" $COORD_OBJID_LST | cut -d' ' -f5 | cut -c2)
+
 				echo -e "$current_obj_id 0 obj"
 				echo -e "\t<<\t/Type /Page"
 				echo -e "\t\t/Parent $PAGES_OBJ_ID 0 R"
@@ -427,7 +432,33 @@ make_page_obj_all() {
 				echo -e "\t\t\t\t\t/Dest [17 0 R /Fit]"
 				echo -e "\t\t\t\t>>"
 
-				# TODO 正面に壁が無いなら、正面へ進むAnnots追加
+				if [ $front_wall -eq 0 ]; then
+					case $d in
+					w)
+						nx=$((x - 1))
+						ny=$y
+						;;
+					n)
+						nx=$x
+						ny=$((y - 1))
+						;;
+					e)
+						nx=$((x + 1))
+						ny=$y
+						;;
+					s)
+						nx=$x
+						ny=$((y + 1))
+						;;
+					esac
+
+					echo -e "\t\t\t\t<<\t/Type /Annot"
+					echo -e "\t\t\t\t\t/Subtype /Link"
+					echo -e "\t\t\t\t\t/Rect [$GO_FORWARD_LLX $GO_FORWARD_LLY $GO_FORWARD_URX $GO_FORWARD_URY]"
+					echo -e "\t\t\t\t\t/Border [0 0 0]"
+					echo -e "\t\t\t\t\t/Dest [PAGEOBJID_${nx}_${ny}_${d} 0 R /Fit]"
+					echo -e "\t\t\t\t>>"
+				fi
 
 				echo -e "\t\t\t\t<<\t/Type /Annot"
 				echo -e "\t\t\t\t\t/Subtype /Link"
