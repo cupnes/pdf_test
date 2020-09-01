@@ -9,6 +9,8 @@ START_OBJ_ID=$2
 WORK_DIR=$(mktemp -d)
 # trap "rm -rf $WORK_DIR" EXIT
 
+COORD_OBJID_LST=$WORK_DIR/coord_objid.lst
+
 CONTENTS_HEAD_TMPL=contents_head.tmpl
 CONTENTS_FOOT_TMPL=contents_foot.tmpl
 DRAW_WALL_INDENT='\t'
@@ -26,6 +28,21 @@ Y2=79.1
 Y3=146.2
 Y4=179.75
 Y5=213
+
+TO_LEFT_LLX=$X0
+TO_LEFT_LLY=$Y2
+TO_LEFT_URX=$X1
+TO_LEFT_URY=$Y3
+
+TO_RIGHT_LLX=$X4
+TO_RIGHT_LLY=$Y2
+TO_RIGHT_URX=$X5
+TO_RIGHT_URY=$Y3
+
+GO_FORWARD_LLX=$X2
+GO_FORWARD_LLY=$Y2
+GO_FORWARD_URX=$X3
+GO_FORWARD_URY=$Y3
 
 PAGES_OBJ_ID=3
 
@@ -331,7 +348,7 @@ make_contents_obj_all() {
 	local wall_pat_line
 
 	local t=$WORK_DIR/contents.obj
-	local lst=$WORK_DIR/coord_objid.lst
+	local lst=$COORD_OBJID_LST
 
 	touch $t $lst
 	for y in $(seq $height); do
@@ -353,11 +370,55 @@ make_contents_obj_all() {
 	cat $t
 }
 
+turn_dir() {
+	local lr=$1
+	local d=$2
+	if [ "$lr" = "left" ]; then
+		case $d in
+		w)
+			echo 's'
+			;;
+		n)
+			echo 'w'
+			;;
+		e)
+			echo 'n'
+			;;
+		s)
+			echo 'e'
+			;;
+		esac
+	else
+		case $d in
+		w)
+			echo 'n'
+			;;
+		n)
+			echo 'e'
+			;;
+		e)
+			echo 's'
+			;;
+		s)
+			echo 'w'
+			;;
+		esac
+	fi
+}
+
+get_contents_objid_from_xyd() {
+	local x=$1
+	local y=$2
+	local d=$3
+	grep "$x $y $d" $COORD_OBJID_LST | cut -d' ' -f4
+}
+
 make_page_obj_all() {
 	local x
 	local y
 	local d
 	local contents_obj_id
+	local page_obj_id
 
 	for y in $(seq $height); do
 		for x in $(seq $width); do
@@ -372,15 +433,45 @@ make_page_obj_all() {
 				echo -e "\t\t\t\t\t/Border [0 0 0]"
 				echo -e "\t\t\t\t\t/Dest [17 0 R /Fit]"
 				echo -e "\t\t\t\t>>"
+
+				# TODO 正面に壁が無いなら、正面へ進むAnnots追加
+
+				echo -e "\t\t\t\t<<\t/Type /Annot"
+				echo -e "\t\t\t\t\t/Subtype /Link"
+				echo -e "\t\t\t\t\t/Rect [$TO_LEFT_LLX $TO_LEFT_LLY $TO_LEFT_URX $TO_LEFT_URY]"
+				echo -e "\t\t\t\t\t/Border [0 0 0]"
+				echo -e "\t\t\t\t\t/Dest [PAGEOBJID_${x}_${y}_$(turn_dir left $d) 0 R /Fit]"
+				echo -e "\t\t\t\t>>"
+
+				echo -e "\t\t\t\t<<\t/Type /Annot"
+				echo -e "\t\t\t\t\t/Subtype /Link"
+				echo -e "\t\t\t\t\t/Rect [$TO_RIGHT_LLX $TO_RIGHT_LLY $TO_RIGHT_URX $TO_RIGHT_URY]"
+				echo -e "\t\t\t\t\t/Border [0 0 0]"
+				echo -e "\t\t\t\t\t/Dest [PAGEOBJID_${x}_${y}_$(turn_dir right $d) 0 R /Fit]"
+				echo -e "\t\t\t\t>>"
+
 				echo -e "\t\t\t]"
 				echo -e "\t\t/Contents $contents_obj_id 0 R"
 				echo -e "\t>>"
 				echo 'endobj'
 				echo
+
+				echo "$x $y $d $current_obj_id" >>$WORK_DIR/coord_pageobjid.lst
 				current_obj_id=$((current_obj_id + 1))
 			done
 		done
+	done >$WORK_DIR/page.obj
+
+	for y in $(seq $height); do
+		for x in $(seq $width); do
+			for d in $DIRECTION_LIST; do
+				page_obj_id=$(grep "$x $y $d" $WORK_DIR/coord_pageobjid.lst | cut -d' ' -f4)
+				sed -i "s/PAGEOBJID_${x}_${y}_${d}/$page_obj_id/" $WORK_DIR/page.obj
+			done
+		done
 	done
+
+	cat $WORK_DIR/page.obj
 }
 
 current_obj_id=$START_OBJ_ID
