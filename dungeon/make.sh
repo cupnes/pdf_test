@@ -406,13 +406,6 @@ turn_dir() {
 	fi
 }
 
-get_contents_objid_from_xyd() {
-	local x=$1
-	local y=$2
-	local d=$3
-	grep "$x $y $d" $COORD_OBJID_LST | cut -d' ' -f4
-}
-
 make_page_obj_all() {
 	local x
 	local y
@@ -423,7 +416,7 @@ make_page_obj_all() {
 	for y in $(seq $height); do
 		for x in $(seq $width); do
 			for d in $DIRECTION_LIST; do
-				contents_obj_id=$(grep "$x $y $d" $WORK_DIR/coord_objid.lst | cut -d' ' -f4)
+				contents_obj_id=$(grep "$x $y $d" $COORD_OBJID_LST | cut -d' ' -f4)
 				echo -e "$current_obj_id 0 obj"
 				echo -e "\t<<\t/Type /Page"
 				echo -e "\t\t/Parent $PAGES_OBJ_ID 0 R"
