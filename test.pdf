@@ -23970,10 +23970,13 @@ endobj
 					/Dest [248 0 R /Fit]
 				>>
 				<<	/Type /Annot
-					/Subtype /Text
+					/Subtype /FileAttachment
 					/Border [1 1 1]
 					/Rect [150 45.55 170 79.1]
-					/Contents (This is a test.\nHello)
+					/FS	<<	/Type /Filespec
+							/F (test.txt)
+							/EF << /F 421 0 R >>
+						>>
 				>>
 			]
 		/Contents 108 0 R
@@ -28970,7 +28973,15 @@ endobj
 	>>
 endobj
 
+421 0 obj
+	<<	>>
+stream
+Hello world!
+Foo bar baz
+endstream
+endobj
+
 trailer
-	<<	/Size 420
+	<<	/Size 421
 		/Root 1 0 R
 	>>
