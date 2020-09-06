@@ -23969,19 +23969,14 @@ endobj
 					/Border [0 0 0]
 					/Dest [248 0 R /Fit]
 				>>
-				<<	/Subtype /Text
-					/RC (<?xml version="1.0"?><body xmlns="http://www.w3.org/1999/xhtml" xmlns:xfa="http://www.xfa.org/schema/xfa-data/1.0/" xfa:APIVersion="Acrobat:20.12.0" xfa:spec="2.0.2" ><p dir="ltr"><span dir="ltr" style="font-size:10.5pt;text-align:left;color:#000000;font-weight:normal;font-style:normal">&#12371;&#12435;&#12395;&#12385;&#12399;&#12289;&#19990;&#30028;&#65281;&#13;&#12371;&#12428;&#12399;&#12486;&#12473;&#12488;&#12391;&#12377;&#12290;</span></p></body>)
-					/T (yohgami)
-					/Contents (şÿ0S0“0k0a0o0NuLÿ \r0S0Œ0o0Æ0¹0È0g0Y0)
+				<<	/Type /Annot
+					/Subtype /FileAttachment
+					/FS	<<	/Type /Filespec
+							/F (multibyte_utf8.txt)
+							/EF << /F 421 0 R >>
+						>>
+					/Contents (multibyte_utf8.txt)
 					/Rect [150 45.55 170 79.1]
-					/M (D:20200906170344+09'00')
-					/Type /Annot
-					/NM (10df7cc8-77ee-4e9e-ab41-a8221cc6e068)
-					/F 28
-					/C [1.0 0.819611 0.0]
-					/Subj (şÿ0Î0ü0Èlè‘È)
-					/Name /Comment
-					/CreationDate (D:20200906170308+09'00')
 				>>
 			]
 		/Contents 108 0 R
@@ -28978,7 +28973,15 @@ endobj
 	>>
 endobj
 
+421 0 obj
+	<<	>>
+stream
+ã“ã‚“ã«ã¡ã¯ã€ä¸–ç•Œï¼
+ã“ã‚Œã¯ãƒ†ã‚¹ãƒˆã§ã™ã€‚
+endstream
+endobj
+
 trailer
-	<<	/Size 420
+	<<	/Size 421
 		/Root 1 0 R
 	>>
