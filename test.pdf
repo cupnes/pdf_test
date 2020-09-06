@@ -23969,6 +23969,12 @@ endobj
 					/Border [0 0 0]
 					/Dest [248 0 R /Fit]
 				>>
+				<<	/Type /Annot
+					/Subtype /Text
+					/Border [1 1 1]
+					/Rect [150 45.55 170 79.1]
+					/Contents (This is a test.\nHello)
+				>>
 			]
 		/Contents 108 0 R
 	>>
