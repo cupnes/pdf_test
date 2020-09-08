@@ -29,6 +29,21 @@ Y3=146.2
 Y4=179.75
 Y5=213
 
+ARROW_BTN_R=1
+ARROW_BTN_G=1
+ARROW_BTN_B=1
+
+ARROW_BTN_FONT_SIZE=28
+
+LEFT_BTN_X=16
+LEFT_BTN_Y=105
+
+RIGHT_BTN_X=265.5
+RIGHT_BTN_Y=105
+
+FORWARD_BTN_X=141
+FORWARD_BTN_Y=105
+
 TO_LEFT_LLX=$X0
 TO_LEFT_LLY=$Y2
 TO_LEFT_URX=$X1
@@ -324,6 +339,25 @@ draw_wall_xyd() {
 	rr=$(echo $lfr | cut -c3)
 
 	draw_wall $cl $cf $cr $nl $nf $nr $ll $lr $rl $rr
+
+	echo -e "\tB"
+
+	echo -e "\t${ARROW_BTN_R} ${ARROW_BTN_G} ${ARROW_BTN_B} rg"
+	echo -e "\tBT"
+	echo -e "\t/F1 ${ARROW_BTN_FONT_SIZE} Tf"
+	echo -e "\t${LEFT_BTN_X} ${LEFT_BTN_Y} Td"
+	echo -e "\t<05>Tj"
+	echo -e "\tET"
+	echo -e "\tBT"
+	echo -e "\t${RIGHT_BTN_X} ${RIGHT_BTN_Y} Td"
+	echo -e "\t<06>Tj"
+	echo -e "\tET"
+	if [ $cf -eq 0 ]; then
+		echo -e "\tBT"
+		echo -e "\t${FORWARD_BTN_X} ${FORWARD_BTN_Y} Td"
+		echo -e "\t<04>Tj"
+		echo -e "\tET"
+	fi
 }
 
 make_a_contents_obj() {
