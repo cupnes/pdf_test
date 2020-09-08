@@ -508,6 +508,10 @@ make_page_obj_all() {
 				echo -e "\t\t\t\t\t/Dest [PAGEOBJID_$(printf '%02d' $x)_$(printf '%02d' $y)_$(turn_dir right $d) 0 R /Fit]"
 				echo -e "\t\t\t\t>>"
 
+				if [ $x -eq 1 -a $y -eq 1 -a "$d" = "e" ]; then
+					cat ../avatars_memo/commentary_1.pdf
+				fi
+
 				echo -e "\t\t\t]"
 				echo -e "\t\t/Contents $contents_obj_id 0 R"
 				echo -e "\t>>"
