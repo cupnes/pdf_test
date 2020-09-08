@@ -23847,7 +23847,7 @@ endobj
 					/Dest [244 0 R /Fit]
 				>>
 			]
-		/Contents 104 0 R
+		/Contents 421 0 R
 	>>
 endobj
 
@@ -28963,7 +28963,60 @@ endobj
 	>>
 endobj
 
+421 0 obj
+	<<	>>
+stream
+	% Fill the background with a solid color
+	0.76 0.78 0.80 RG
+	0.76 0.78 0.80 rg
+	0 0 320 240 re
+	B
+
+	% Draw the window
+	0.06 0.06 0.08 RG	% black line color
+	0.76 0.77 0.78 rg	% system color
+	10 10 300 220 re
+	B
+	0.06 0.06 0.08 RG
+	1.00 1.00 1.00 rg
+	12 12 296 216 re
+	B
+	0.06 0.06 0.08 RG
+	0.00 0.00 0.67 rg
+	12 213 281 15 re
+	B
+	0.06 0.06 0.08 RG
+	0.76 0.77 0.78 rg
+	293 213 15 15 re
+	B
+	0.06 0.06 0.08 RG	% stroking color
+	0.76 0.77 0.78 rg	% nonstroking color
+	296 216 m
+	305 225 l
+	296 225 m
+	305 216 l
+	B
+
+	1 1 1 rg
+
+	% Title text
+
+	0.06 0.06 0.08 RG
+	0.06 0.06 0.08 rg
+	12 12 296 201 re
+	B
+
+	1 1 1 RG
+	% DEBUG obj_id=104 wall_pat=1001010010
+	61.33 45.55 m 61.33 179.75 l 110.66 146.2 l 110.66 79.1 l 61.33 45.55 l
+	209.34 79.1 m 209.34 146.2 l 258.67 179.75 l 258.67 45.55 l 209.34 79.1 l
+	12 12 m 61.33 45.55 l 61.33 179.75 l 12 213 l
+	258.67 79.1 m 308 79.1 l 258.67 146.2 m 308 146.2 l
+	B
+endstream
+endobj
+
 trailer
-	<<	/Size 420
+	<<	/Size 421
 		/Root 1 0 R
 	>>
