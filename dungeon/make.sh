@@ -510,6 +510,20 @@ make_page_obj_all() {
 
 				if [ $x -eq 1 -a $y -eq 1 -a "$d" = "e" ]; then
 					cat ../avatars_memo/commentary_1.pdf
+				elif [ $x -eq 4 -a $y -eq 1 -a "$d" = "e" ]; then
+					cat ../avatars_memo/commentary_2.pdf
+				elif [ $x -eq 7 -a $y -eq 2 -a "$d" = "e" ]; then
+					cat ../avatars_memo/commentary_3.pdf
+				elif [ $x -eq 8 -a $y -eq 3 -a "$d" = "w" ]; then
+					cat ../avatars_memo/commentary_4.pdf
+				elif [ $x -eq 6 -a $y -eq 4 -a "$d" = "w" ]; then
+					cat ../avatars_memo/hint_1.pdf
+				elif [ $x -eq 9 -a $y -eq 2 -a "$d" = "s" ]; then
+					cat ../avatars_memo/hint_2.pdf
+				elif [ $x -eq 4 -a $y -eq 4 -a "$d" = "s" ]; then
+					cat ../avatars_memo/commentary_5.pdf
+				elif [ $x -eq 9 -a $y -eq 5 -a "$d" = "s" ]; then
+					cat ../avatars_memo/hint_3.pdf
 				fi
 
 				echo -e "\t\t\t]"
