@@ -23968,15 +23968,6 @@ endobj
 					/Border [0 0 0]
 					/Dest [248 0 R /Fit]
 				>>
-				<<	/Type /Annot
-					/Subtype /FileAttachment
-					/FS	<<	/Type /Filespec
-							/F (multibyte_utf8.txt)
-							/EF << /F 421 0 R >>
-						>>
-					/Contents (multibyte_utf8.txt)
-					/Rect [150 45.55 170 79.1]
-				>>
 			]
 		/Contents 108 0 R
 	>>
@@ -28972,15 +28963,7 @@ endobj
 	>>
 endobj
 
-421 0 obj
-	<<	>>
-stream
-こんにちは、世界！
-これはテストです。
-endstream
-endobj
-
 trailer
-	<<	/Size 421
+	<<	/Size 420
 		/Root 1 0 R
 	>>
