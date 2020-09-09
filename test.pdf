@@ -4996,6 +4996,16 @@ endobj
 		/Parent 3 0 R
 		/Annots	[
 				9 0 R
+				<<	/Border [0 0 0]
+					/Subtype /Link
+					/Type /Annot
+					/Rect [17 173 245 185]
+					/A
+						<<	/URI (https://github.com/cupnes/pdf_test/releases/tag/tbf09)
+							/Type /Action
+							/S /URI
+						>>
+				>>
 				96 0 R
 				98 0 R
 				101 0 R
